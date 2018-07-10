@@ -12,7 +12,7 @@ public class RegistrationPageWebElements {
 		return firstName;
 	}
 	
-	@FindBy(xpath="//input[@name='first_name']")
+	@FindBy(xpath="//input[@name='last_name']")
 	private WebElement LastName;
 
 	public WebElement getLastName() {
@@ -91,7 +91,7 @@ public class RegistrationPageWebElements {
 		return userNameError;
 	}
 	
-	@FindBy(xpath="//small[@data-bv-validator-for='password']")
+	@FindBy(xpath="//small[@data-bv-validator-for='user_password']")
 	private WebElement passwordError;
 
 	public WebElement getPasswordError() {
@@ -109,17 +109,79 @@ public class RegistrationPageWebElements {
 	private WebElement emailError;
 
 	public WebElement getEmailError() {
-		return confirmPasswordError;
+		return emailError;
 	}
 	
 	@FindBy(xpath="//small[@data-bv-validator-for='contact_no']")
 	private WebElement contactNoError;
 
-	public WebElement getContactNoError() {
+	public WebElement getontactNoError() {
 		return contactNoError;
 	}
 	
+	@FindBy(xpath="//small[@data-bv-validator='notEmpty' and @data-bv-validator-for='first_name']")
+	private WebElement firstNameError1;
+
+	public WebElement getFirstNameError1() {
+		return firstNameError1;
+	}
+	
+	@FindBy(xpath="//small[@data-bv-validator='notEmpty' and @data-bv-validator-for='last_name']")
+	private WebElement lastNameError1;
+
+	public WebElement getLastNameError1() {
+		return lastNameError1;
+	}
 	
 	
+	@FindBy(xpath="//small[@data-bv-validator='notEmpty' and @data-bv-validator-for='user_name']")
+	private WebElement userNameError1;
+
+	public WebElement getUserNameError1() {
+		return userNameError1;
+	}
+	
+	@FindBy(xpath="//small[@data-bv-validator='notEmpty' and @data-bv-validator-for='user_password']")
+	private WebElement passwordError1;
+
+	public WebElement getPasswordError1() {
+		return passwordError1;
+	}
+	
+	@FindBy(xpath="//small[@data-bv-validator='notEmpty' and @data-bv-validator-for='confirm_password']")
+	private WebElement confirmPasswordError1;
+
+	public WebElement getConfirmPasswordError1() {
+		return confirmPasswordError1;
+	}
+	
+	@FindBy(xpath="//small[@data-bv-validator='notEmpty' and @data-bv-validator-for='email']")
+	private WebElement emailError1;
+
+	public WebElement getEmailError1() {
+		return emailError1;
+	}
+	
+	@FindBy(xpath="//small[@data-bv-validator='notEmpty' and @data-bv-validator-for='contact_no']")
+	private WebElement contactNoError1;
+
+	public WebElement getontactNoError1() {
+		return contactNoError1;
+	}
+	
+	@FindBy(xpath="//*[contains(text(),'Registration Form')]")
+	private WebElement registrationPage;
+	
+	public WebElement getRegistrationPage() {
+		return registrationPage;
+	}
+	
+	
+	@FindBy(xpath="//*[contains(text(),'Thanks')]")
+	private WebElement thanksPage;
+	
+	public WebElement getThanksPage() {
+		return thanksPage;
+	}
 	
 }
