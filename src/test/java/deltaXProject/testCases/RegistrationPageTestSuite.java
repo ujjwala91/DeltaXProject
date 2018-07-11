@@ -158,7 +158,7 @@ public class RegistrationPageTestSuite extends TestBase {
 	public void verifyEmail() {
 		String email = TestUtil.getCellData(15, 2);
 		Boolean val = reg.emailValidation(email);
-		if (val = false) {
+		if (!val) {
 			ele.getEmail().sendKeys(email);
 			String errorText = ele.getEmailError().getText();
 			Assert.assertEquals(errorText, "This value is not valid");
@@ -172,7 +172,7 @@ public class RegistrationPageTestSuite extends TestBase {
 		String password = TestUtil.getCellData(16, 2);
 		String confirmPassword = TestUtil.getCellData(16, 3);
 		Boolean val = reg.comparePassword(password, confirmPassword);
-		if (val = false) {
+		if (!val) {
 			ele.getPassword().sendKeys(password);
 			ele.getPassword().sendKeys(confirmPassword);
 			String errorText = ele.getConfirmPasswordError().getText();
@@ -186,9 +186,9 @@ public class RegistrationPageTestSuite extends TestBase {
 	public void verifyContactNo() {
 		String contactNo = TestUtil.getCellData(17, 2);
 		Boolean val = reg.contactNoValidation(contactNo);
-		if (val = false) {
+		if (!val) {
 			ele.getContactNo().sendKeys(contactNo);
-			String errorText = ele.getConfirmPasswordError().getText();
+			String errorText = ele.getContactNumberError().getText();
 			Assert.assertEquals(errorText, "This value is not valid");
 		} else {
 			System.out.println("pass");
@@ -212,7 +212,7 @@ public class RegistrationPageTestSuite extends TestBase {
 
 		ele.getSubmit().click();
 
-		Assert.assertEquals(ele.getRegistrationPage().getText(), "Registration Page");
+		Assert.assertEquals(ele.getRegistrationPage().getText(), "Registration Form");
 
 	}
 
@@ -232,7 +232,7 @@ public class RegistrationPageTestSuite extends TestBase {
 
 		Thread.sleep(3000);
 
-		Assert.assertEquals(ele.getRegistrationPage().getText(), "Thanks");
+		Assert.assertEquals(ele.getThanksPage().getText(), "Thanks");
 
 	}
 
@@ -251,7 +251,7 @@ public class RegistrationPageTestSuite extends TestBase {
 
 		Thread.sleep(3000);
 
-		Assert.assertEquals(ele.getRegistrationPage().getText(), "Thanks");
+		Assert.assertEquals(ele.getThanksPage().getText(), "Thanks");
 
 	}
 

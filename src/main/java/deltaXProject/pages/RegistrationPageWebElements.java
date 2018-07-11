@@ -69,14 +69,21 @@ public class RegistrationPageWebElements {
 		return submit;
 	}
 	
-	@FindBy(xpath="//small[@data-bv-validator-for='first_name']")
+	@FindBy(xpath="//small[@data-bv-validator='stringLength' and @data-bv-validator-for='first_name']")
 	private WebElement firstNameError;
 
 	public WebElement getFirstNameError() {
 		return firstNameError;
 	}
 	
-	@FindBy(xpath="//small[@data-bv-validator-for='last_name']")
+	@FindBy(xpath="//small[@data-bv-validator='stringLength' and @data-bv-validator-for='contact_no']")
+	private WebElement contactNumberError;
+
+	public WebElement getContactNumberError() {
+		return contactNumberError;
+	}
+	
+	@FindBy(xpath="//small[@data-bv-validator='stringLength' and @data-bv-validator-for='last_name']")
 	private WebElement lastNameError;
 
 	public WebElement getLastNameError() {
@@ -84,35 +91,35 @@ public class RegistrationPageWebElements {
 	}
 	
 	
-	@FindBy(xpath="//small[@data-bv-validator-for='user_name']")
+	@FindBy(xpath="//small[@data-bv-validator='stringLength' and @data-bv-validator-for='user_name']")
 	private WebElement userNameError;
 
 	public WebElement getUserNameError() {
 		return userNameError;
 	}
 	
-	@FindBy(xpath="//small[@data-bv-validator-for='user_password']")
+	@FindBy(xpath="//small[@data-bv-validator='stringLength' and @data-bv-validator-for='user_password']")
 	private WebElement passwordError;
 
 	public WebElement getPasswordError() {
 		return passwordError;
 	}
 	
-	@FindBy(xpath="//small[@data-bv-validator-for='confirm_password']")
+	@FindBy(xpath="//small[@data-bv-validator='stringLength' and @data-bv-validator-for='confirm_password']")
 	private WebElement confirmPasswordError;
 
 	public WebElement getConfirmPasswordError() {
 		return confirmPasswordError;
 	}
 	
-	@FindBy(xpath="//small[@data-bv-validator-for='email']")
+	@FindBy(xpath="//small[@data-bv-validator='stringLength' and @data-bv-validator-for='email']")
 	private WebElement emailError;
 
 	public WebElement getEmailError() {
 		return emailError;
 	}
 	
-	@FindBy(xpath="//small[@data-bv-validator-for='contact_no']")
+	@FindBy(xpath="//small[@data-bv-validator='stringLength' and @data-bv-validator-for='contact_no']")
 	private WebElement contactNoError;
 
 	public WebElement getontactNoError() {

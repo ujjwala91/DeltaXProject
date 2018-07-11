@@ -5,10 +5,12 @@
     <classes>
       <class name="deltaXProject.testCases.RegistrationPageTestSuite">
         <methods>
-          <include name="verifySubmitButtonWithFewMandatoryFieldsasBlank"/>
           <include name="setUp"/>
           <include name="tearDow1"/>
           <include name="dataSetup"/>
+          <include name="verifyEmailErrorBelow8Char"/>
+          <include name="verifySubmitButtonWithAllFieldsWithValidValues"/>
+          <include name="verifySubmitButtonWithNonMandatoryFieldsasBlanks"/>
         </methods>
       </class> <!-- deltaXProject.testCases.RegistrationPageTestSuite -->
     </classes>
